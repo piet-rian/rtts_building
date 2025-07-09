@@ -6,8 +6,9 @@
 
   <ThingDef ParentName="BuildingBase">
     <defName>RTTS_GEODESIC_DOME</defName>
-    <label>熱力学第二法則の反証</label>
-    <description>世にも不思議な周辺の熱を奪って発電する装置です。マクスウェルの悪魔への報酬として、定期的に「ほしのかけら」の補充が必要です</description>
+    <label>Dome of Maxwell's demon</label>
+    <description>It is a device that generates electricity by taking heat from its surroundings.
+      \nAs a reward to Maxwell's Demon, the “Star Piece” needs to be replenished regularly!</description>
     <category>Building</category>
 
     <graphicData>

@@ -13,13 +13,13 @@
     <graphicData>
       <texPath>Things/Building/Power/FROST_DOME</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(4.5,4.5)</drawSize> <!-- 描画上のサイズ -->
+      <drawSize>(2.0,2.0)</drawSize> <!-- 描画上のサイズ -->
     </graphicData>
 
     <uiIconPath>Things/Building/Power/FROST_DOME</uiIconPath>
     <uiIconScale>0.85</uiIconScale> <!-- ギズモ等のUI上のサイズ -->
 
-    <size>(3,3)</size> <!-- 実際の建築サイズ -->
+    <size>(1,1)</size> <!-- 実際の建築サイズ -->
 
     <rotatable>false</rotatable>
     <altitudeLayer>Building</altitudeLayer>

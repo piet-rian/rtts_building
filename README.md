@@ -1,12 +1,27 @@
-# RimworldXMLModTemplate
+# Return to The Star - building
 
-This is the template repository for XML-based mods in RIMWORLD.
+- ゲームバランスを大いに壊す建造物類の追加
+  - 基本的に直接建造が出来ない
+    - 例外あり
+  - `聖堂` (前提Modが追加する作業台) で作成する必要がある
+    - Royaltyのピアノと同じ方式
+- [Return to The Star - core](https://github.com/piet-rian/rtts_core) が前提Modとして必要です
 
-see. <https://rimworldwiki.com/wiki/Modding_Tutorials/Mod_Folder_Structure>
+## 追加建造物
+
+※検討段階であるため内容が変わる可能性が高い
+
+- 電源・燃料不要で恒久的に輝く照明
+- 周囲の熱を燃料(比喩用言)とする発電機
+- `ほしのかけら` (前提Modが追加するアイテム) を燃料とする発電機
+- 同 `ほしのかけら` を弾薬とするタレット
 
 ## MID-SAVE
 
-途中導入および途中除去についての記述
+- 途中追加
+  - 問題ありません。
+- 途中削除
+  - しないほうが良いでしょう。
 
 ## CONFLICT
 

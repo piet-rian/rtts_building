@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 
-    <!-- see. https://rimworldwiki.com/wiki/Modding_Tutorials/About.xml -->
+    <packageId>piet.rian.rtts.building</packageId>
+    <name>Rerurn to The Star - building</name>
+    <authors>
+        <li>piet-rian</li>
+    </authors>
+    <description> Add some OP buildings.</description>
+    <supportedVersions>
+        <li>1.6</li>
+    </supportedVersions>
+
+    <modVersion>1.0</modVersion>
+    <url>https://github.com/piet-rian/rtts_building</url>
+
+    <modDependencies>
+        <li>
+            <packageId>piet.rian.rtts.core</packageId>
+            <displayName>Rerurn to The Star - core</displayName>
+            <downloadUrl>https://github.com/piet-rian/rtts_core</downloadUrl>
+        </li>
+    </modDependencies>
+
+    <loadAfter>
+        <li>piet.rian.rtts.core</li>
+    </loadAfter>
 
 </ModMetaData>

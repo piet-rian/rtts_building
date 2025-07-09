@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <!-- * パッシブクーラーのThingDefを元に要所だけ書き換えた -->
+
+  <!-- README.md における 周囲の熱を燃料(比喩用言)とする発電機 に相当する -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RTTS_GEODESIC_DOME</defName>
+    <label>熱力学第二法則の反証</label>
+    <description>世にも不思議な周辺の熱を奪って発電する装置です。マクスウェルの悪魔への報酬として、定期的に「ほしのかけら」の補充が必要です</description>
+    <category>Building</category>
+
+    <graphicData>
+      <texPath>Things/Building/Power/FROST_DOME</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4.5,4.5)</drawSize> <!-- 描画上のサイズ -->
+    </graphicData>
+
+    <uiIconPath>Things/Building/Power/FROST_DOME</uiIconPath>
+    <uiIconScale>0.85</uiIconScale> <!-- ギズモ等のUI上のサイズ -->
+
+    <size>(3,3)</size> <!-- 実際の建築サイズ -->
+
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>0</pathCost>
+
+
+    <minifiedDef /> <!-- 持ち運び不可 -->
+    <thingCategories Inherit="false" /> <!-- 備蓄ゾーン用のカテゴリ指定不要 -->
+    <designationCategory>RTTS_DC_RTTS</designationCategory>    <!-- アーキテクトから建築可能にする -->
+
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.10</fillPercent>
+
+    <useHitPoints>false</useHitPoints> <!-- 適切なHPを考えるのが難しいのでいっそのことHP設定なくす -->
+
+    <statBases>
+      <WorkToBuild>10000</WorkToBuild>
+      <Flammability>0.0</Flammability>
+      <Beauty>128</Beauty>
+    </statBases>
+
+    <selectable>true</selectable>
+
+    <costList>
+      <RTTS_STAR_PIECE>1000</RTTS_STAR_PIECE>
+    </costList>
+
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+    </building>
+
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+
+    <placeWorkers>
+      <li>PlaceWorker_CoolerSimple</li>
+      <li>PlaceWorker_GlowRadius</li>
+      <li>PlaceWorker_NeverAdjacentUnstandable</li>
+    </placeWorkers>
+
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerPlant</compClass>
+        <basePowerConsumption>-4096</basePowerConsumption> <!-- 2^13, 地熱発電より多いぐらいに留める -->
+        <transmitsPower>true</transmitsPower>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>13</glowRadius>
+        <glowColor>(0,200,250,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <!-- 熱波(40℃)環境下において、内寸11x11の二重壁&二重扉の部屋の温度が、-10℃程度を維持できるように設定 -->
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>-39</heatPerSecond>
+        <heatPushMinTemperature>-270</heatPushMinTemperature>
+      </li>
+      <li Class="CompProperties_Refuelable">
+        <!-- 60日(Rimworldにおける一年)で燃料がなくなる -->
+        <fuelConsumptionRate>1.0</fuelConsumptionRate>
+        <fuelCapacity>60.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>RTTS_STAR_PIECE</li>
+          </thingDefs>
+        </fuelFilter>
+        <initialFuelPercent>1</initialFuelPercent>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+      </li>
+    </comps>
+    <!-- <designationCategory>RTTS_DC_RTTS</designationCategory> -->
+    <designationHotKey>Misc4</designationHotKey>
+
+    <researchPrerequisites>
+      <li>RTTS_RESEARCH_PROJECT_1T</li>
+      <li>ShipReactor</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

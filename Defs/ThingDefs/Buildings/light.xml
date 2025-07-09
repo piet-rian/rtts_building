@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="RttsBuildingBase" Name="RttsLightBase" Abstract="True">
+    <!-- 建造物の上に乗せる設定かつXMLのみで済まそうとすると多分この設定になる -->
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <passability>Standable</passability>
+    <clearBuildingArea>false</clearBuildingArea>
+
+    <!-- 内容がちょっとわからない -->
+    <placeWorkers>
+      <li>PlaceWorker_GlowRadius</li>
+    </placeWorkers>
+  </ThingDef>
+
+  <!-- TODO:壁灯  -->
+
+  <!-- かがやく星  -->
+  <ThingDef ParentName="RttsLightBase">
+    <defName>RTTS_SHINING_STAR</defName>
+    <label>shining star</label>
+    <description>the stars make my life so shine , and no one can take bright.</description>
+
+    <graphicData>
+      <texPath>Things/Building/Furniture/ShiningStar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <uiIconPath>Things/Building/Furniture/ShiningStar</uiIconPath>
+    <uiIconScale>0.85</uiIconScale>
+
+    <fillPercent>0.15</fillPercent>
+
+    <statBases>
+      <!-- 彫刻やピアノといった作業台で作る建築物の場合はWorkToBuildではなくWorkToMakeで指定する -->
+      <WorkToMake>300</WorkToMake>
+      <Mass>0.5</Mass>
+      <Beauty>32</Beauty>
+    </statBases>
+
+    <costList>
+      <RTTS_STAR_PIECE>20</RTTS_STAR_PIECE>
+    </costList>
+
+    <comps>
+      <li Class="CompProperties_Glower">
+        <!-- 光る範囲と色 -->
+        <glowRadius>20</glowRadius>
+        <glowColor>(255,255,255,0)</glowColor>
+      </li>
+    </comps>
+
+    <uiOrder>2800</uiOrder>
+    <designationHotKey>Misc10</designationHotKey>
+
+
+    <recipeMaker>
+      <!-- レシピメーカーで定義 -->
+      <researchPrerequisites>
+        <li>RTTS_RESEARCH_PROJECT_1T</li>
+        <li>ColoredLights</li>
+      </researchPrerequisites>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Artistic</workSkill>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
+      <recipeUsers>
+        <li>RTTS_STAR_CIRCLE</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

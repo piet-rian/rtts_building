@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase" Name="RttsBuildingBase" Abstract="True">
+    <thingClass>Building</thingClass>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
+    <category>Building</category>    <!-- このカテゴリがよくわかってない -->
+
+    <!-- アーキテクト上のカテゴリ スターサークルでのみ作成可能としたいため設定しない -->
+    <!-- 例外的(≒フレーバー的)に直接建設したい場合は個別に上書きする -->
+    <designationCategory />
+
+    <!-- 売買不可 -->
+    <tradeability>None</tradeability>
+
+    <!-- 持ち運び可能 -->
+    <minifiedDef>MinifiedThing</minifiedDef>
+
+    <!-- 画像素材的に北向き1枚だけの場合が大半なので回転不可とする -->
+    <!-- 椅子を筆頭に向きに意味がある場合は跨越に上書きする -->
+    <rotatable>false</rotatable>
+
+    <statBases>
+      <Flammability>0.0</Flammability> <!-- 可燃性 -->
+      <SellPriceFactor>0.0</SellPriceFactor> <!-- 売値補正 -->
+      <MeditationFocusStrength>0.0</MeditationFocusStrength> <!-- 瞑想時のボーナス -->
+    </statBases>
+
+    <building>
+      <isEdifice>false</isEdifice>
+      <ai_chillDestination>false</ai_chillDestination>
+      <canPlaceOverWall>false</canPlaceOverWall> <!-- 壁置き不可 -->
+      <!-- 瞑想にボーナスがあるタイプの人工物か -->
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+    </building>
+
+    <selectable>true</selectable>
+
+    <!-- どれぐらいの頻度で状況チェックするか、みたいなパラメーターだと思われる。トーチランプとかがノーマルだったのでそのまま -->
+    <tickerType>Normal</tickerType>
+    <!-- どれぐらいの頻度で描画更新するか、みたいなパラメーターだと思われる。トーチランプとかがノーマルだったのでそのまま -->
+    <drawerType>RealtimeOnly</drawerType>
+
+
+    <!-- 適切なHPを考えるのが難しいのでいっそのことHP設定なくす -->
+    <useHitPoints>false</useHitPoints>
+    <!-- 分解したら素材全部戻ってくる -->
+    <resourcesFractionWhenDeconstructed>1</resourcesFractionWhenDeconstructed>
+  </ThingDef>
+
+</Defs>

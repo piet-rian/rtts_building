@@ -7,8 +7,9 @@
 
 ## Third Party License
 
-- Modが別の開発物・素材に依存している場合に表記
-  - 名称
-  - 権利者名
-  - 配布先URL
-  - ライセンス表記
+いずれもいわゆる MIT であったりとか CC であったりといったライセンスとは異なるライセンスが設定してあるため、個別の記載は省略
+
+### `Textures\Things\Building\Furniture\ShiningStar.png`
+
+- <https://www.flaticon.com/free-icon/star_471658>
+  - こちらをベースに黄色の塗りつぶしを追加。

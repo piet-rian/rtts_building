@@ -23,7 +23,7 @@
     <size>(1,1)</size> <!-- 実際の建築サイズ -->
 
     <rotatable>false</rotatable>
-    <altitudeLayer>Building</altitudeLayer>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <pathCost>0</pathCost>
 
@@ -80,7 +80,7 @@
         <!-- 熱波(40℃)環境下において、内寸11x11の二重壁&二重扉の部屋の温度が、-10℃程度を維持できるように設定 -->
         <compClass>CompHeatPusherPowered</compClass>
         <heatPerSecond>-39</heatPerSecond>
-        <heatPushMinTemperature>-270</heatPushMinTemperature>
+        <heatPushMinTemperature>-39</heatPushMinTemperature> <!-- あまり低い温度を設定すると軌道上で超低温になってしまう -->
       </li>
       <li Class="CompProperties_Refuelable">
         <!-- 60日(Rimworldにおける一年)で燃料がなくなる -->

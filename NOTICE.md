@@ -18,3 +18,8 @@
 
 - <https://www.flaticon.com/free-icon/globe_13969838>
   - こちらをベースに透過部分を白で塗りつぶした
+
+### `Textures\Things\Building\Misc\projector.png`
+
+- <https://www.flaticon.com/free-icon/hologram_6607867>
+  - こちらをベースに塗りつぶしを追加

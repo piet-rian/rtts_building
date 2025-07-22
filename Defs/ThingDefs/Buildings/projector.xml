@@ -11,7 +11,7 @@
     <graphicData>
       <texPath>Things/Building/Misc/projector</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(1.2,1.2)</drawSize>
+      <drawSize>(1.5,1.5)</drawSize>
     </graphicData>
     <uiIconPath>Things/Building/Misc/projector</uiIconPath>
     <altitudeLayer>Building</altitudeLayer>
@@ -37,6 +37,8 @@
       <li>MicroelectronicsBasics</li>
       <li>ColoredLights</li>
     </researchPrerequisites>
+    <!-- 持ち運び可能 -->
+    <minifiedDef>MinifiedThing</minifiedDef>
     <comps>
       <li Class="CompProperties_Refuelable">
         <!-- 3日で18消費するぐらいの計算 -->

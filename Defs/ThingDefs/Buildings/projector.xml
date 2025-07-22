@@ -67,22 +67,27 @@
       <li Class="CompProperties_Flickable" />
 
       <li Class="CompProperties_GiveHediffSeverity">
-        <hediff>SmokeleafHigh</hediff>
+        <hediff>TwinkleHigh</hediff>
         <range>13.1</range>
         <severityPerSecond>0.005</severityPerSecond>
-        <drugExposure>true</drugExposure>
-        <chemical>Smokeleaf</chemical>
+        <!--
+          中毒症状を起こすと面倒なので、発生しないように指定
+          <drugExposure>true</drugExposure>
+          <chemical>Smokeleaf</chemical>
+        -->
         <allowMechs>false</allowMechs>
       </li>
 
       <!-- エフェクト周りの定義のはず、ここいじれば独自定義も出来そうだけど一旦コメントアウト -->
-      <!--       <li Class="CompProperties_SmokeCloudMaker">
+      <!--
+      <li Class="CompProperties_SmokeCloudMaker">
         <sourceStreamEffect>BurnbongSmoke</sourceStreamEffect>
         <cloudRadius>4.9</cloudRadius>
         <fleckScale>4</fleckScale>
         <cloudFleck>AutobongSmoke</cloudFleck>
         <fleckSpawnMTB>25</fleckSpawnMTB>
-      </li> -->
+      </li>
+      -->
     </comps>
 
     <!-- 暫定で普通に建築可能とする -->

@@ -7,6 +7,9 @@
     <defName>RTTS_TWINKLE_PROJECTOR</defName>
     <label>Twinkle projector</label>
     <description>TODO</description>
+    <thingCategories>
+      <li>BuildingsFurniture</li>
+    </thingCategories>
     <category>Building</category>
     <graphicData>
       <texPath>Things/Building/Misc/projector</texPath>
@@ -24,6 +27,7 @@
     <rotatable>false</rotatable>
     <size>(1,1)</size>
     <statBases>
+      <Mass>1.0</Mass>
       <MaxHitPoints>100</MaxHitPoints>
       <WorkToBuild>1200</WorkToBuild>
     </statBases>

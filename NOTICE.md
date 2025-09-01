@@ -14,6 +14,10 @@
 - <https://www.flaticon.com/free-icon/star_471658>
   - こちらをベースに黄色の塗りつぶしを追加。
 
+### `Textures\Things\Building\Furniture\TwinkleStar.png`
+
+- <https://www.flaticon.com/free-icon/stars_9633956>
+
 ### `Textures\Things\Building\Power\FROST_DOME.png`
 
 - <https://www.flaticon.com/free-icon/globe_13969838>

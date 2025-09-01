@@ -69,4 +69,56 @@
     </recipeMaker>
   </ThingDef>
 
+  <!-- きらきら星  -->
+  <ThingDef ParentName="RttsLightBase">
+    <defName>RTTS_TWINKLE_STAR</defName>
+    <label>twinkle star</label>
+    <description>Twinkle, twinkle, little star</description>
+
+    <graphicData>
+      <texPath>Things/Building/Furniture/TwinkleStar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+    </graphicData>
+    <uiIconPath>Things/Building/Furniture/TwinkleStar</uiIconPath>
+    <uiIconScale>0.85</uiIconScale>
+
+    <fillPercent>0.15</fillPercent>
+
+    <statBases>
+      <!-- 彫刻やピアノといった作業台で作る建築物の場合はWorkToBuildではなくWorkToMakeで指定する -->
+      <WorkToMake>100</WorkToMake>
+      <Mass>0.5</Mass>
+      <Beauty>32</Beauty>
+    </statBases>
+
+    <costList>
+      <RTTS_STAR_PIECE>3</RTTS_STAR_PIECE>
+    </costList>
+
+    <comps>
+      <li Class="CompProperties_Glower">
+        <!-- 光る範囲と色 -->
+        <glowRadius>7</glowRadius>
+        <glowColor>(255,255,255,0)</glowColor>
+      </li>
+    </comps>
+
+    <uiOrder>2800</uiOrder>
+    <designationHotKey>Misc10</designationHotKey>
+
+    <recipeMaker>
+      <!-- レシピメーカーで定義 -->
+      <researchPrerequisites>
+        <li>RTTS_RESEARCH_PROJECT_1T</li>
+      </researchPrerequisites>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Artistic</workSkill>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
+      <recipeUsers>
+        <li>RTTS_STAR_CIRCLE</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
 </Defs>
